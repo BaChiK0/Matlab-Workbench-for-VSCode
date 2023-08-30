@@ -12,6 +12,7 @@
   ],
   "activationEvents": [],
   "main": "./dist/extension.js",
+  "publisher": "BaChiK0",
   "contributes": {
     "viewsContainers": {
       "panel": [
