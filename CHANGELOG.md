@@ -1,9 +1,5 @@
 # Change Log
 
-All notable changes to the "matlab-workbench-for-vscode" extension will be documented in this file.
+##### Beta [ 0.0.1 ] 2023-8-30
 
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
-
-## [Unreleased]
-
-- Initial release
+- Implemented the matlab workbench in vscode.

@@ -2,7 +2,7 @@ import * as vscode from 'vscode';
 import * as path from 'path';
 
 export function getConfig(): vscode.WorkspaceConfiguration {
-    return vscode.workspace.getConfiguration('matlab-workbench-for-vscode');
+    return vscode.workspace.getConfiguration('matlabworkbench');
 }
 
 export function getPythonPath(config : vscode.WorkspaceConfiguration): string {

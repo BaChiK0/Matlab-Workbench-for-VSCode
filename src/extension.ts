@@ -8,10 +8,6 @@ import * as path from 'path';
 // This method is called when your extension is activated
 export function activate(context: vscode.ExtensionContext) {
 
-	const config: vscode.WorkspaceConfiguration = conf.getConfig();
-
-	const pythonPath: string = conf.getPythonPath(config);
-
 	const WorkBenchProvider: workbench.WorkBenchProvider = new workbench.WorkBenchProvider();
 
 	vscode.window.registerTreeDataProvider('workbench', WorkBenchProvider);
@@ -33,6 +29,8 @@ export function activate(context: vscode.ExtensionContext) {
 	context.subscriptions.push(vscode.commands.registerCommand('MatlabWorkbench.getMatlabWorkbench', () => {
 		for (const terminal of vscode.window.terminals) {
 			if (terminal.name === 'MATLAB') {
+				const config: vscode.WorkspaceConfiguration = conf.getConfig();
+				const pythonPath: string = conf.getPythonPath(config);
 				const output : string = child_process.execFileSync(pythonPath, [scriptPath], {encoding: 'utf8'});
 				const stringlist : string[]= output.trim().slice(1, -1).split(/\s*, \s*/);
 				const map : Map<string, string> = new Map();
