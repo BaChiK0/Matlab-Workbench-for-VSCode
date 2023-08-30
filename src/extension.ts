@@ -12,7 +12,7 @@ export function activate(context: vscode.ExtensionContext) {
 
 	vscode.window.registerTreeDataProvider('workbench', WorkBenchProvider);
 
-	const scriptDir: string = path.join(context.asAbsolutePath("") ,'/src');
+	const scriptDir: string = path.join(context.asAbsolutePath("") ,'/python');
 
 	const scriptPath: string = path.join(scriptDir, 'getWorkbench.py');
 
